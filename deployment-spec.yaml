@@ -1,0 +1,16 @@
+enabled: true
+image: joshuapaperspace/resnet-app:latest
+port: 80
+models:
+  - id: mos4tj03jozbboi
+    path: /opt/mos4tj03jozbboi
+env:
+  - name: MODEL_NAME
+    value: resnet50
+  - name: MODEL_FILE
+    value: resnet50.pt
+  - name: MODEL_DIR
+    value: /opt/mos4tj03jozbboi
+resources:
+  replicas: 1
+  instanceType: A4000
