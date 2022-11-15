@@ -1,8 +1,9 @@
-FROM fastapi-deploy:latest
+FROM paperspace/fastapi-deployment:latest
 
 WORKDIR /app
 
-COPY config main.py preprocess.py resnet.py requirements.txt ./
+COPY main.py preprocess.py resnet.py requirements.txt ./
+COPY config ./config
 
 RUN pip3 install -U pip && pip3 install -r requirements.txt
 
