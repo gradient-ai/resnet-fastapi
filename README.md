@@ -1,4 +1,4 @@
-# FastAPI-deployment
+# ResNet-FastAPI
 
 ### ![FastAPI](images/FastAPI_logo.png)
 
