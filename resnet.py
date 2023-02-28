@@ -196,7 +196,7 @@ def model_setup():
     MODEL_NAME = os.getenv('MODEL_NAME')
     MODEL_PATH = os.path.join(MODEL_DIR, MODEL_FILE)
 
-    model_dict = model_dict = {'resnet18': resnet18(3,10)
+    model_dict = {'resnet18': resnet18(3,10)
                     ,'resnet34': resnet34(3,10)
                     ,'resnet50': resnet50(3,10)
                     ,'resnet101': resnet101(3,10)
