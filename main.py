@@ -17,6 +17,17 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World!"}
 
+@app.get("/liveness/", status_code=200)
+def liveness_check():
+    return "Liveness check succeeded."
+
+@app.get("/readiness/", status_code=200)
+def readiness_check():
+    return "Readiness check succeeded."
+
+@app.get("/startup/", status_code=200)
+def startup_check():
+    return "Startup check succeeded."
 
 @app.get("/predict")
 async def predict(image: bytes = File()):
